@@ -12,3 +12,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+
+debug: $(NAME)
+
+.PHONY: clean fclean debug
