@@ -6,7 +6,7 @@
 /*   By: chelmerd <chelmerd@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:02:19 by chelmerd          #+#    #+#             */
-/*   Updated: 2022/07/11 12:15:08 by chelmerd         ###   ########.fr       */
+/*   Updated: 2022/07/11 13:44:37 by chelmerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 
 enum e_type {
 	STD = 0,
-	PIPE_OUT,
+	PIPE,
 	END	
 };
 
@@ -38,10 +38,10 @@ struct s_lst {
 	char			**args;
 	int				argc;
 	enum e_type		type;
+	int				pipe[2];
 	struct s_lst	*next;
 	struct s_lst	*prev;
 };
 typedef struct s_lst	t_lst;
-
 
 #endif
